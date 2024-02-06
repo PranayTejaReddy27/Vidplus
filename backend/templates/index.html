@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>Maha-Lakshmi | Home</title>
+</head>
+<body>
+    <div class="page-head">
+        <a href="/" style="text-decoration:none;color:black"><img style="max-height: 120px;max-width: 150px;margin-top: -10px;" src="../static/images/youtube-logo-png-2074.png" alt=""><span>Vidplus</span></a>
+    <form action="/" method="POST">
+        <div class="search-bar">
+                <input type="search" name="query" placeholder="Search">
+                <button type="submit"><img src="../static/images/searchicon.png"></button>
+        </div>
+    </form>
+    </div>
+    <div class="video-grid">
+        {% if results %}
+            {% for result in results %}
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/{{ result }}" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video 1</h3>
+                </div>
+            {% endfor %}
+        {% else %}
+            <!-- If there are no search results, display the default videos here -->
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/ZRziVvsZgtc" frameborder="0" allowfullscreen></iframe>
+                <h3>Default Video 1</h3>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/7dhKeHT2Bdk" frameborder="0" allowfullscreen></iframe>
+                <h3>Default Video 2</h3>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/WRg400pvxo4" frameborder="0" allowfullscreen></iframe>
+                <h3>Default Video 1</h3>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/O0nnhPDkb4Q" frameborder="0" allowfullscreen></iframe>
+                <h3>Default Video 2</h3>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/C4Bl2D_X7Ug" frameborder="0" allowfullscreen></iframe>
+                <h3>Default Video 1</h3>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/ek7uSRlD0yA" frameborder="0" allowfullscreen></iframe>
+                <h3>Default Video 2</h3>
+            </div>
+            <!-- Add more default video elements as needed -->
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -42,7 +42,6 @@ def collected_list():
     
     sorted_videos = sorted(videos_data, key=lambda x: x[2], reverse=True)
 
-   
     for video in sorted_videos:
         print(f"Video ID: {video[0]}")
         print(f"Positive Score: {video[2]}")

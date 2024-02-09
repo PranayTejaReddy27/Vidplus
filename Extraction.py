@@ -2,7 +2,7 @@
 import googleapiclient.discovery
 from googleapiclient.errors import HttpError
 
-api_key = 'YOUR_API_KEY'
+api_key = 'AIzaSyDTt8htsSBXUU9V_xEWlF-ansYfr13Y1bw'
 
 def raw_comments(video_ids):
     youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey=api_key)
